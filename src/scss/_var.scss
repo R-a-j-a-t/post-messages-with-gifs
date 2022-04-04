@@ -1,0 +1,40 @@
+// Color variables
+$addGifBtnCol: #b3b3b3;
+$bgCol: #f4f4f4;
+$mainBgCol: white;
+$postBtnCol: royalblue;
+// $gifSrchCol: #00ffff80;
+// $gifSrchCol: #b2cdcd80;
+$gifSrchCol: #e0ffff80;
+$scrlBgCol: lightgrey;
+$scrlThmbCol: darkgrey;
+$noPstBrdCol: #c3c3c3;
+$noPstTxtCol: lightsteelblue;
+$pstTxtBgCol: #c5c5c520;
+
+// Margin & Padding variables
+$dspPstsMrgTp: 0.5rem;
+$mrgnBtm: 0.5rem;
+$mrgnLR: 5%;
+$padTB: 0.5rem;
+$padPst: 1rem;
+$mrgnBtmPst: 1rem;
+$padBtmRoot: 1rem;
+$mrgnTopRoot: 1.5rem;
+$mrgnBtmGfLst: 1rem;
+
+// Position variables
+$gifSrchMnuTop: 100%;
+$rmvBtnTp: 2px;
+$rmvBtnRt: 4px;
+
+// Size variables
+$crtPstMinW: 300px;
+$crtPstMaxW: 600px;
+$txtPstMinMax: 90%;
+$btnW: 200px;
+$srclW: 12px;
+$srchGifWH: 300px - $srclW;
+$pstGifBrdRd: 0.5rem;
+$noPstMinHt: 50px;
+$gifLstHt: $crtPstMinW;

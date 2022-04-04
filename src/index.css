@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+hr {
+  margin-bottom: 0.5rem;
+  width: 90%;
+}
+
+#create-post {
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  min-width: 300px;
+  max-width: 600px;
+  width: 90%;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.textarea-post {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.1rem;
+  min-height: 150px;
+  max-height: 150px;
+  min-width: 90%;
+  max-width: 90%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#added-gif {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.add-gif-btn {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #b3b3b3;
+  margin-left: 5%;
+  border: none;
+  border-radius: 0.67rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+  width: 200px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.add-gif-btn:hover, .submit-post:hover {
+  cursor: pointer;
+}
+
+.submit-post {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #f4f4f4;
+  background-color: royalblue;
+  margin-right: 5%;
+  border: none;
+  border-radius: 0.67rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+  width: 200px;
+}
+
+.post-gif-result {
+  border-radius: 0.5rem;
+  height: 300px;
+  width: 300px;
+}
+
+.current-gif {
+  position: relative;
+}
+
+.remove-gif {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 4px;
+  top: 2px;
+}
+
+#gif-search-menu {
+  background-color: #e0ffff80;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  left: 5%;
+  top: 100%;
+  -webkit-transition: visibility 0.5s ease;
+  transition: visibility 0.5s ease;
+  -webkit-transform: translate(0, calc(-1rem - 35px));
+          transform: translate(0, calc(-1rem - 35px));
+  width: 300px;
+}
+
+.gif-search-box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.1rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+}
+
+.gifs-list::-webkit-scrollbar {
+  width: 12px;
+}
+
+.gifs-list::-webkit-scrollbar-track {
+  background-color: lightgrey;
+}
+
+.gifs-list::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border: 2px solid lightgrey;
+  border-radius: 12px;
+}
+
+.menuVisible {
+  visibility: visible;
+}
+
+.menuHidden {
+  visibility: hidden;
+}
+
+#loading-sign {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  -webkit-transition: visibility 0.5s ease;
+  transition: visibility 0.5s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.hideLoading {
+  visibility: hidden;
+}
+
+.showLoading {
+  visibility: visible;
+}
+
+.gifs-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 1rem;
+  overflow: auto;
+  height: 300px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.gif-result {
+  margin-bottom: 0.5rem;
+  height: 288px;
+  width: 288px;
+}
+
+.gif-result:hover {
+  cursor: pointer;
+}
+
+#display-posts {
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  min-width: 300px;
+  max-width: 600px;
+  width: 90%;
+  padding: 0.5rem 0;
+  background-color: transparent;
+  margin-top: 0.5rem;
+}
+
+.no-post {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: lightsteelblue;
+  font-size: 1.75rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  min-height: 50px;
+  width: 90%;
+}
+
+.post {
+  background: white;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.post-gif {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  height: 300px;
+  width: 300px;
+}
+
+.post-text {
+  background-color: #c5c5c520;
+  border-radius: 0.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+/*# sourceMappingURL=index.css.map */

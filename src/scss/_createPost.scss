@@ -1,0 +1,76 @@
+@import 'var';
+
+#create-post {
+    @include postCreateDisplay;
+    
+    position: relative;
+}
+
+.textarea-post {
+    box-sizing: border-box;
+    
+    font-size: 1.1rem;
+
+    min-height: 150px;
+    max-height: 150px;
+    min-width: $txtPstMinMax;
+    max-width: $txtPstMinMax;
+
+    padding: 1rem;
+    margin-top: $mrgnBtm;
+    margin-bottom: $mrgnBtm;
+}
+
+#added-gif {
+    @include flexStartCenter;
+    margin-bottom: $mrgnBtm;
+}
+
+.add-gif-btn {
+    align-self: flex-start;
+    
+    color: $addGifBtnCol;
+    
+    margin-left: $mrgnLR;
+    
+    @include postBtn;
+    
+    transition: all 0.5s ease;
+}
+
+.add-gif-btn:hover, .submit-post:hover {
+    cursor: pointer;
+}
+
+.submit-post {
+    align-self: flex-end;
+
+    color: $bgCol;
+    background-color: $postBtnCol;
+    
+    margin-right: $mrgnLR;
+    
+    @include postBtn;
+}
+
+.post-gif-result {
+    border-radius: $pstGifBrdRd;
+
+    height: $crtPstMinW;
+    width: $crtPstMinW;
+}
+
+.current-gif {
+    position: relative;
+}
+
+.remove-gif {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    position: absolute;
+    right: $rmvBtnRt;
+    top: $rmvBtnTp;
+}

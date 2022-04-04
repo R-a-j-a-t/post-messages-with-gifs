@@ -1,0 +1,79 @@
+@import 'var';
+
+#gif-search-menu {
+    background-color: $gifSrchCol;
+    box-sizing: border-box;
+
+    position: absolute;
+    left: $mrgnLR;
+    top: $gifSrchMnuTop;
+    
+    transition: visibility 0.5s ease;
+    transform: translate(0, calc(-1rem - 35px));
+    
+    width: $crtPstMinW;
+}
+
+.gif-search-box {
+    box-sizing: border-box;
+    font-size: 1.1rem;
+
+    padding: 0.25rem 0.5rem;
+
+    width: 100%;
+}
+
+.gifs-list::-webkit-scrollbar {
+    width: $srclW;
+}
+.gifs-list::-webkit-scrollbar-track {
+    background-color: $scrlBgCol;
+}
+.gifs-list::-webkit-scrollbar-thumb {
+    background-color: $scrlThmbCol;
+    border: 2px solid $scrlBgCol;
+    border-radius: $srclW;
+}
+
+.menuVisible {
+    visibility: visible;
+}
+.menuHidden {
+    visibility: hidden;
+}
+
+#loading-sign {
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    padding: $padTB 0;
+    transition: visibility 0.5s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.hideLoading {
+    visibility: hidden;
+}
+.showLoading {
+    visibility: visible;
+}
+
+.gifs-list {
+    @include flexStartCenter;
+    box-sizing: border-box;
+    margin-bottom: $mrgnBtmGfLst;
+    overflow: auto;
+    height: $gifLstHt;
+    width: fit-content;
+}
+
+.gif-result {
+    margin-bottom: $mrgnBtm;
+
+    height: $srchGifWH;
+    width: $srchGifWH;
+}
+
+.gif-result:hover {
+    cursor: pointer;
+}

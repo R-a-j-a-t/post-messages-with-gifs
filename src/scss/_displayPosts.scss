@@ -1,0 +1,49 @@
+@import 'var';
+
+#display-posts {
+    @include postCreateDisplay;
+    background-color: transparent;
+
+    margin-top: $dspPstsMrgTp;
+}
+
+.no-post {
+    box-sizing: border-box;
+    // border: 1px solid $noPstBrdCol;
+    color: $noPstTxtCol;
+    font-size: 1.75rem;
+    
+    padding: 2 * $padTB;
+    margin: 2 * $mrgnBtm 0;
+    
+    min-height: $noPstMinHt;
+    width: $txtPstMinMax;
+}
+
+.post {
+    background: $mainBgCol;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: $padPst;
+    margin-bottom: $mrgnBtmPst;
+    width: 100%;
+}
+
+.post-gif {
+    align-self: center;
+    border-radius: $pstGifBrdRd;
+    margin-bottom: $mrgnBtm;
+    height: $crtPstMinW;
+    width: $crtPstMinW;
+}
+
+.post-text {
+    background-color: $pstTxtBgCol;
+    border-radius: $pstGifBrdRd;
+    box-sizing: border-box;
+
+    padding: $padPst;
+    margin-bottom: $mrgnBtm;
+}

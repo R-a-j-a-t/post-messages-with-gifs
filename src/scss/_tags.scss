@@ -1,0 +1,16 @@
+@import 'var';
+
+body {
+    background-color: $bgCol;
+}
+
+main {
+    @include flexStartCenter;
+    padding-bottom: $padBtmRoot;
+    margin-top: $mrgnTopRoot;
+}
+
+hr {
+    margin-bottom: $mrgnBtm;
+    width: $txtPstMinMax;
+}

@@ -1,0 +1,37 @@
+@import 'var';
+
+@mixin flexStartCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@mixin postCreateDisplay {
+    background-color: $mainBgCol;
+
+    box-sizing: border-box;
+    border-radius: 8px;
+    
+    @include flexStartCenter;
+    
+    min-width: $crtPstMinW;
+    max-width: $crtPstMaxW;
+    // width: 100%;
+    width: 90%;
+
+    padding: $padTB 0;
+}
+
+@mixin postBtn {
+    border: none;
+    border-radius: 0.67rem;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    margin-bottom: $mrgnBtm;
+    padding: 0.5rem 0;
+    
+    width: 200px;
+}
