@@ -1,4 +1,4 @@
-# post-messages-with-gifs
+# Post messages with gifs
 A web app to post messages along with gifs
 
 This web app allows you to post texts along with cool gifs!
